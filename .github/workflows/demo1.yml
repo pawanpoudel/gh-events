@@ -1,5 +1,19 @@
 name: Events Demo 1
-on: ...
+on:
+  # push:
+  #   branches:
+  #     - 'main'
+  #     - 'releases/**'
+  #   paths:
+  #     - 'src/**'
+  #     - 'package.json'
+  #     - 'package-lock.json'
+  pull_request:
+    types:
+      - opened
+      # - synchronize
+      # - reopened
+  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
